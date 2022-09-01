@@ -1,0 +1,29 @@
+Bibliotecas: Se usaron requests para la descarga de datos, json para la transformacion de los datos descargados. Pandas para la creacion de DataFrames 
+y exportacion de archivos csv. Time para llevar el control en las descargas de datos. Configparser para leer el archivo config.ini con mayor velocidad y simpleza. 
+Rich se utilizo para darle un aspecto mas colorido a los outputs de la terminal. 
+
+Tarea 1: Analizar como es la estructura html de la pagina y los parametros de las urls (20min aprox) 
+
+Tarea 2: Buscar una api y visualizar su estructura de datos (5min aprox) 
+
+Tarea 3: Empezar a crear el crawler, usando la api para extraer datos y ayudandose de diferentes parametros de urls,  
+para iterar entre las sucursales y las diferentes pags. Se complico en el objetivo de extraer "precio_lista",  "precio_promocion", "stock". Ya que estas caracteristicas 
+estaban muy anidadas en la estructura de la api. (4hrs aprox) PD: En esta tarea se comete el error de empezar a crear el codigo de  abajo hacia arriba, y no de arriba 
+hacia abajo. La cual complicaria en un futuro implementar paralelismo o concurrencia simple en la estructura. 
+
+Tarea 4: Se crea otra funcion para extraer productos de otras sucursales y guardarlos en un csv. En esta funcion tambien se usa un proxy para que no se bannee la ip 
+de la pag, es un proxy gratis encontrado en internet. (2:30hrs aprox) 
+
+Tarea 5: Se crea la primer funcion en ejecutarse, la cual crea los 15 parametros finales, para iterar entre las sucursales. Tambien se crea una lista con todos los nombres 
+de las sucursales, se tomo esta decision ya que no se podian extraer del codigo html de las paginas, y se vio mas viable que hacer 15 if == parametro final de la url. Para saber 
+el nombre de la sucursal que se esta scrapeando, ya que siempre scrapea en el mismo orden cronologico. (1hr aprox) PD: El nombre de la sucursal tampoco se encontraba  
+en la api. 
+
+Tarea 6: Se crea el archivo config.ini para configurar el crawler, Proxy, nombre y ruta. (20min aprox) 
+
+Tarea 7: Se crea mayor robustes con trys y ifs, para soportar errores. Tambien se agregan prints con colores para ir siguiendo las descargas de los productos, el tiempo de 
+descarga por sucursal es aproximadamente 2min. (20min aprox)   
+
+PD: Se intento implementar paralelismo o concurrencia simple con Threadpoolexecutor, pero no se pudo. 
+
+Crawler realizado en 8:35hrs aproximadamente.
